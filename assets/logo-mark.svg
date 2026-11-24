@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="EZTech Logo Mark">
+  <!-- EZTech Architectural Monogram — Pure Geometric Vector -->
+  <!-- Piece 1: Shared top bar & Z stroke -->
+  <path d="M12 18H88V32L65.8 69H88V82H42L72.6 31H12V18Z" fill="#F2F4F7"/>
+  <!-- Piece 2: Lower-left E bracket -->
+  <path d="M12 44H37.2L29.4 57H25V69H43L35.2 82H12V44Z" fill="#F2F4F7"/>
+  <!-- Piece 3: Glacier-teal diagonal nexus -->
+  <path d="M44 44H58L50.2 57H36.2L44 44Z" fill="#3CCBD7"/>
+</svg>
