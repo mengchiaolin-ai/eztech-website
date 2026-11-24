@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EZTech 純粹科技 | 從 0 到億級用戶的全方位科技顧問與企業資安夥伴</title>
+  <meta name="description" content="純粹科技（EZTech）集結一線科技大廠 10+ 年實戰核心團隊，提供國際設計獎等級 App/Web 產品設計開發、商業化增長行銷、EV/OCPP 軟硬體整合，以及繁中 AI 安全護欄與台灣個資 DLP 防護模組。">
+  <meta name="theme-color" content="#090B0E">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Open Graph / Social Sharing (LINE, LinkedIn, Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="EZTech 純粹科技">
+  <meta property="og:title" content="EZTech 純粹科技 | 從 0 到億級用戶的科技顧問與資安夥伴">
+  <meta property="og:description" content="懂設計、懂開發、懂增長，更懂資安防禦。一線大廠核心團隊 × 連續榮獲國際設計獎肯定，提供全生命週期數位產品交付與繁中 AI 安全閘道。">
+  <meta property="og:image" content="./assets/hero-architecture.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EZTech 純粹科技 | 從 0 到億級用戶的科技顧問與資安夥伴">
+  <meta name="twitter:description" content="一線大廠 10+ 年研發團隊，整合產品設計開發、商業增長、EV/OCPP 系統整合與 EZTech Security 資安防禦模組。">
+  <meta name="twitter:image" content="./assets/hero-architecture.jpg">
+
+  <!-- Fonts: Plus Jakarta Sans + Noto Sans TC + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "純粹科技股份有限公司 EZTech",
+    "alternateName": "EZTech",
+    "description": "從 0 到億級用戶的全方位科技顧問夥伴，專精 App/Web 產品設計與敏捷開發、商業增長行銷、軟硬體與 OCPP 系統整合，以及企業級繁中 AI 安全防護模組。",
+    "areaServed": "TW",
+    "email": "contact@eztech.com.tw",
+    "telephone": "+886-2-2658-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "台北市",
+      "addressCountry": "TW"
+    },
+    "serviceType": [
+      "軟體產品設計與開發",
+      "商業化模式設計與增長行銷",
+      "軟硬體整合與 EV OCPP 系統開發",
+      "企業資訊安全與繁中 AI 安全護欄"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">跳至主要內容</a>
+  <div class="ambient-wash" aria-hidden="true"></div>
+
+  <!-- ==================== 1. Sticky Header ==================== -->
+  <header id="site-header" class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="EZTech 純粹科技首頁">
+        <div class="brand__mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 6.5H19L12.5 12H19L7.5 18.5L11 12.5H5L11.5 6.5H5Z" fill="#F2F4F7"/>
+            <rect x="5" y="3.5" width="7" height="1.8" rx="0.9" fill="#3CCBD7"/>
+          </svg>
+        </div>
+        <div class="brand__text">
+          <span class="brand__name">EZTech<span>|</span>純粹科技</span>
+          <span class="brand__sub">純粹科技股份有限公司</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="主導覽列">
+        <a href="#services" class="nav-link">核心服務</a>
+        <a href="#security" class="nav-link">資安模組 <span class="nav-tag">NEW</span></a>
+        <a href="#demo" class="nav-link">即時體驗</a>
+        <a href="#cases" class="nav-link">實戰案例</a>
+        <a href="#process" class="nav-link">合作流程</a>
+        <a href="#pricing" class="nav-link">方案報價</a>
+      </nav>
+
+      <div class="header-cta">
+        <button id="header-consult-btn" type="button" class="btn btn--primary btn--sm" data-open-modal data-plan="一般專案與科技顧問諮詢" data-modules="軟體開發">
+          預約諮詢
+        </button>
+      </div>
+
+      <button id="mobile-menu-btn" type="button" class="menu-toggle" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg id="menu-icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+        <svg id="menu-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" hidden>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer" aria-label="行動版導覽選單">
+      <nav class="mobile-drawer__nav">
+        <a href="#services" class="mobile-drawer__link">核心服務</a>
+        <a href="#security" class="mobile-drawer__link">資安模組 <span class="nav-tag">NEW</span></a>
+        <a href="#demo" class="mobile-drawer__link">即時體驗 AI 閘道</a>
+        <a href="#cases" class="mobile-drawer__link">實戰案例與實績</a>
+        <a href="#process" class="mobile-drawer__link">團隊實力與流程</a>
+        <a href="#pricing" class="mobile-drawer__link">方案報價</a>
+      </nav>
+      <button type="button" class="btn btn--primary btn--full" data-open-modal data-plan="一般專案與科技顧問諮詢" data-modules="軟體開發,資訊安全模組">
+        預約專案／資安諮詢
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==================== 2. Hero Section ==================== -->
+    <section id="top" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="hero-kicker">
+              <span class="hero-kicker__accent">EZTECH TAIPEI</span>
+              <span>/</span>
+              <span>一線大廠核心團隊 × 連續多年國際設計獎肯定</span>
+            </div>
+
+            <h1 class="hero-title">
+              從 0 到億級用戶的<br>全方位科技顧問夥伴
+              <span class="hero-title__sub">懂設計、懂開發、懂增長，更懂資安防禦。</span>
+            </h1>
+
+            <p class="hero-desc">
+              純粹科技（EZTech）集結來自一線科技大廠、平均擁有 10 年以上實戰經驗的資深班底。我們為企業提供從產品設計、敏捷開發、商業變現與行銷增長，到全新企業級 AI 安全防護模組的一站式顧問與交付服務。
+            </p>
+
+            <div class="hero-actions">
+              <button id="hero-consult-btn" type="button" class="btn btn--primary" data-open-modal data-plan="專案開發與資安架構諮詢" data-modules="軟體開發,資訊安全模組">
+                預約專案／資安諮詢
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"></path>
+                  <path d="m13 6 6 6-6 6"></path>
+                </svg>
+              </button>
+              <a href="#demo" class="btn btn--ghost">
+                即時體驗 AI 安全閘道
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <figure class="hero-frame">
+              <div class="hero-frame__media">
+                <img src="./assets/hero-architecture.jpg" alt="EZTech 純粹科技多層次軟體架構與資安防護抽象設計視覺" width="1376" height="768" fetchpriority="high">
+              </div>
+              <figcaption class="hero-frame__caption">
+                <span>DESIGN · DEV · GROWTH · SECURITY</span>
+                <span class="hero-frame__status">ZERO-TRUST READY</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Architectural Metrics Strip -->
+        <div class="metrics-strip reveal" aria-label="核心實績數據">
+          <div class="metric-item">
+            <div class="metric-item__value">10+ 年</div>
+            <div class="metric-item__label">一線大廠團隊經驗</div>
+            <div class="metric-item__desc">深厚 App 與高併發系統底蘊</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-item__value">千萬～億級</div>
+            <div class="metric-item__label">用戶量級 APP 實戰</div>
+            <div class="metric-item__desc">大規模全球營運與效能驗證</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-item__value">國際設計獎</div>
+            <div class="metric-item__label">連續多年獲獎肯定</div>
+            <div class="metric-item__desc">以行為數據驅動使用者體驗</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-item__value">4-in-1</div>
+            <div class="metric-item__label">設計 × 開發 × 增長 × 資安</div>
+            <div class="metric-item__desc">產品商業變現與防禦一次到位</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. Core Services ==================== -->
+    <section id="services" class="section section-divider">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow__num">01</span> CORE SERVICES</div>
+            <h2 class="section-title">打破設計、開發與增長孤島的<br>全方位數位交付</h2>
+          </div>
+          <p class="section-lead">
+            許多外包團隊只負責「把功能寫出來」，卻忽略體驗留存、商業轉換與系統防禦。EZTech 以產品擁有者思維切入，讓每個版本迭代都對齊真實營收與長期可維護性。
+          </p>
+        </div>
+
+        <div class="services-grid reveal">
+          <!-- Module 01 -->
+          <article class="service-cell">
+            <div>
+              <div class="service-cell__top">
+                <span class="service-cell__index">MODULE 01</span>
+                <svg class="service-cell__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="6" y="2.5" width="12" height="19" rx="2.5"></rect>
+                  <line x1="11" y1="18" x2="13" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="service-cell__title">軟體產品設計與開發（App &amp; Web）</h3>
+              <p class="service-cell__desc">
+                涵蓋原生 iOS / Android、跨平台 App 與高併發 Web 平台全端開發。導入敏捷（Agile）交付與埋點分析，用真實用戶數據驗證設計假設。
+              </p>
+              <ul class="check-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  國際設計獎等級 UI/UX 互動設計與 Design System
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  千萬級用戶驗證的微服務與雲端架構設計
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  敏捷 Sprint 雙週交付與 A/B 測試數據驗證
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="service-cell__action" data-open-modal data-plan="軟體產品設計與開發諮詢" data-modules="軟體開發">
+              洽詢產品設計與開發
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </button>
+          </article>
+
+          <!-- Module 02 -->
+          <article class="service-cell">
+            <div>
+              <div class="service-cell__top">
+                <span class="service-cell__index">MODULE 02</span>
+                <svg class="service-cell__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-cell__title">商業化模式設計與增長行銷</h3>
+              <p class="service-cell__desc">
+                產品不只做得好，更要賣得動。協助企業從 0 到 1 建構訂閱、會員分級與電商變現模型，結合全漏斗成長策略與精準廣告投放。
+              </p>
+              <ul class="check-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  商業變現模型與付費牆（Paywall）轉換優化
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  全漏斗獲客策略與留存率提升（CRO / Retention）
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  跨媒體精準廣告投放與完整數據歸因追蹤
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="service-cell__action" data-open-modal data-plan="商業化與增長行銷諮詢" data-modules="商業化與行銷">
+              洽詢商業化與增長顧問
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </button>
+          </article>
+
+          <!-- Module 03 -->
+          <article class="service-cell">
+            <div>
+              <div class="service-cell__top">
+                <span class="service-cell__index">MODULE 03</span>
+                <svg class="service-cell__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="7" y="7" width="10" height="10" rx="1.5"></rect>
+                  <path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"></path>
+                </svg>
+              </div>
+              <h3 class="service-cell__title">軟硬體整合與產業系統開發</h3>
+              <p class="service-cell__desc">
+                具備跨領域底層通訊與產業場域經驗，涵蓋新能源充電樁、智慧物聯網硬體、區塊鏈金融與大型外勤派工系統開發。
+              </p>
+              <ul class="check-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  電動車充電操作系統（EV OS）與 OCPP 協定整合
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  智能音箱、BLE / Wi-Fi IoT 裝置配網與雲端控制
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  區塊鏈金融（FinTech）與大型企業即時派工系統
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="service-cell__action" data-open-modal data-plan="軟硬體整合與產業系統諮詢" data-modules="軟硬體與 OCPP">
+              洽詢軟硬體與系統整合
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. EZTech Security Module ==================== -->
+    <section id="security" class="section section-divider">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow__num">02</span> NEW LAUNCH · EZTECH SECURITY</div>
+            <h2 class="section-title">企業級資訊安全防護模組<br>為 AI 時代打造的防禦架構</h2>
+          </div>
+          <p class="section-lead">
+            因應生成式 AI 導入帶來的機密外洩與自動化攻擊，EZTech 將安全左移（Shift-Left）直接內建於軟體開發生命週期，並提供專為繁體中文與台灣法規設計的 AI 安全閘道器。
+          </p>
+        </div>
+
+        <!-- Clean Architectural Pipeline Visual -->
+        <div class="security-pipeline reveal" aria-label="EZTech AI 安全閘道運作流程圖">
+          <div class="pipeline-label">
+            <span>GATEWAY ARCHITECTURE // ZERO DATA RETENTION PIPELINE</span>
+            <span>平均延遲 &lt; 50ms · 支援地端私有部署</span>
+          </div>
+          <div class="pipeline-steps">
+            <div class="pipeline-node">
+              <div class="pipeline-node__step">STEP 01 · INPUT</div>
+              <div class="pipeline-node__title">企業員工 / 系統呼叫</div>
+              <div class="pipeline-node__sub">包含客戶個資、統編、報價或程式碼的 Prompt 與 API 請求</div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </div>
+
+            <div class="pipeline-node pipeline-node--core">
+              <div class="pipeline-node__step">STEP 02 · EZTECH GUARD</div>
+              <div class="pipeline-node__title">繁中安全護欄與 DLP 引擎</div>
+              <div class="pipeline-node__sub">即時攔截提示詞注入與文言文越獄；台灣個資與報價自動替換為安全代幣</div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </div>
+
+            <div class="pipeline-node">
+              <div class="pipeline-node__step">STEP 03 · EXTERNAL LLM</div>
+              <div class="pipeline-node__title">外部 AI 模型安全運算</div>
+              <div class="pipeline-node__sub">僅接收去識別化內容（如 [TAX_ID]），零機密外洩風險</div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </div>
+
+            <div class="pipeline-node">
+              <div class="pipeline-node__step">STEP 04 · RESTORE</div>
+              <div class="pipeline-node__title">本地自動還原與稽核</div>
+              <div class="pipeline-node__sub">AI 回傳後於閘道層自動還原真實欄位，並寫入完整合規稽核日誌</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Architectural Security Pillars -->
+        <div class="pillars-grid reveal">
+          <div class="pillar">
+            <div class="pillar__tag">PILLAR 01 · DEVSECOPS</div>
+            <h3 class="pillar__title">Secure-by-Design 安全開發</h3>
+            <p class="pillar__desc">
+              將原始碼靜態檢測（SAST）、細粒度 API 權限控管，以及針對 AI 輔助生成程式碼的漏洞審查直接整合進 CI/CD 流程，從第一行程式碼杜絕結構性弱點。
+            </p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__tag">PILLAR 02 · COMPLIANCE</div>
+            <h3 class="pillar__title">自動化弱點監控與合規維運</h3>
+            <p class="pillar__desc">
+              提供定期自動化外部弱點掃描、資料庫與 API 異常存取 7×24 即時告警，並產出符合台灣上市櫃公司與供應鏈稽核要求的標準化合規報告。
+            </p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__tag">PILLAR 03 · ZH-TW AI GUARD</div>
+            <h3 class="pillar__title">繁中 AI 安全護欄與台灣個資 DLP</h3>
+            <p class="pillar__desc">
+              深度調校繁體中文、中英夾雜提示詞注入與角色扮演越獄防禦，精準辨識台灣身分證、居留證、統一編號、手機與商業報價，支援遮罩送出與自動還原。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. Interactive AI Guard Simulator ==================== -->
+    <section id="demo" class="section section-divider">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow__num">03</span> INTERACTIVE SIMULATOR</div>
+            <h2 class="section-title">EZTech AI 安全閘道器<br>即時互動模擬體驗</h2>
+          </div>
+          <p class="section-lead">
+            點選下方測試情境，或自行輸入含身分證、統一編號、手機、Email、報價或越獄指令的文字，立即檢視閘道偵測結果與「AI 回覆自動還原」完整流程。
+          </p>
+        </div>
+
+        <div class="demo-shell reveal">
+          <div class="demo-bar">
+            <div class="demo-bar__left">
+              <div class="demo-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>eztech-ai-guard // zh-TW-dlp-gateway v2.4</span>
+            </div>
+            <div class="demo-bar__right">
+              <span>CLIENT-SIDE SAFE SANDBOX · ACTIVE</span>
+            </div>
+          </div>
+
+          <div class="demo-body">
+            <!-- Left Pane: Input -->
+            <div class="demo-pane demo-pane--input">
+              <label for="demo-input" class="demo-label">1. 選擇情境範例或輸入測試內容</label>
+
+              <div class="preset-row" role="group" aria-label="安全檢測範例">
+                <button type="button" class="preset-btn is-active" data-preset="dlp">機密報價與台灣個資</button>
+                <button type="button" class="preset-btn" data-preset="injection">中英夾雜提示詞注入</button>
+                <button type="button" class="preset-btn" data-preset="classical">文言文越獄攻擊</button>
+                <button type="button" class="preset-btn" data-preset="safe">一般安全提問</button>
+              </div>
+
+              <textarea id="demo-input" class="demo-textarea" placeholder="輸入欲傳送給外部 AI（如 ChatGPT / Claude）的內容，例如包含姓名、身分證、統一編號、手機或報價..."></textarea>
+
+              <div class="demo-controls">
+                <button id="demo-clear-btn" type="button" class="btn btn--ghost btn--sm">清除內容</button>
+                <button id="demo-scan-btn" type="button" class="btn btn--accent btn--sm">
+                  立即執行安全檢測
+                </button>
+              </div>
+              <p class="demo-hint">支援偵測：身分證／居留證、統一編號、手機／市話、Email、聯絡人姓名、報價金額、中英提示詞注入與越獄攻擊（全程於瀏覽器端安全模擬，不會上傳輸入內容）。</p>
+            </div>
+
+            <!-- Right Pane: Telemetry & 2-Stage Output -->
+            <div class="demo-pane">
+              <div class="demo-status-row">
+                <span class="demo-label" style="margin-bottom: 0;">2. 閘道即時偵測與處理結果</span>
+                <div class="demo-meta">
+                  <span id="result-latency" class="telemetry-pill">延遲: -- ms</span>
+                  <span id="result-badge" class="status-badge">等待檢測</span>
+                </div>
+              </div>
+
+              <div class="threat-section">
+                <div class="threat-title">風險分析與偵測標籤</div>
+                <div id="result-threats" class="threat-list"></div>
+              </div>
+
+              <div class="output-tabs" role="tablist" aria-label="模擬檢視階段">
+                <button id="tab-masked" type="button" role="tab" aria-selected="true" class="output-tab is-active" data-output-tab="masked">
+                  送往外部 AI（去識別化／攔截）
+                </button>
+                <button id="tab-restored" type="button" role="tab" aria-selected="false" class="output-tab" data-output-tab="restored">
+                  AI 回覆自動還原預覽
+                </button>
+              </div>
+
+              <div id="result-output" class="output-box" role="tabpanel" aria-live="polite"></div>
+              <div id="result-action-note" class="output-note"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. Featured Case Studies & Industries ==================== -->
+    <section id="cases" class="section section-divider">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow__num">04</span> TRACK RECORD &amp; CASE STUDIES</div>
+            <h2 class="section-title">跨領域實戰案例與<br>規模化交付實績</h2>
+          </div>
+          <p class="section-lead">
+            從承受億級全球活躍用戶的消費型行動應用，到高門檻能源充電基礎設施與合規金融科技平台，以下為去識別化之代表性交付成果。
+          </p>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="案例領域篩選">
+          <button type="button" class="filter-btn is-active" data-case-filter="all">全部案例</button>
+          <button type="button" class="filter-btn" data-case-filter="consumer">消費型億級應用</button>
+          <button type="button" class="filter-btn" data-case-filter="iot">能源與軟硬體整合</button>
+          <button type="button" class="filter-btn" data-case-filter="security">金融科技與企業資安</button>
+        </div>
+
+        <div class="cases-grid reveal">
+          <!-- Case 1 -->
+          <article class="case-card" data-category="consumer">
+            <div class="case-card__media">
+              <img src="./assets/case-global-app.jpg" alt="億級用戶行動應用設計與商業增長案例視覺" width="1376" height="768" loading="lazy">
+            </div>
+            <div class="case-card__body">
+              <div class="case-card__meta">
+                <span>GLOBAL CONSUMER APP</span>
+                <span>千萬～億級用戶規模</span>
+              </div>
+              <h3 class="case-card__title">全球化消費型與高留存工具 App 體驗重構與變現增長</h3>
+              <p class="case-card__summary">
+                協助上市軟體企業重塑核心行動端產品體驗與訂閱制商業模型，於高併發流量下維持極致流暢與高轉換率。
+              </p>
+              <dl class="case-specs">
+                <div class="case-spec"><dt>背景挑戰</dt><dd>跨國版本體驗碎片化、付費轉換停滯且舊架構難以快速 A/B 迭代。</dd></div>
+                <div class="case-spec"><dt>解決方案</dt><dd>建立跨平台設計系統、數據埋點實驗框架與動態訂閱付費牆。</dd></div>
+                <div class="case-spec"><dt>交付成果</dt><dd>榮獲國際設計獎肯定，關鍵流程轉換率與長期訂閱留存顯著成長。</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- Case 2 -->
+          <article class="case-card" data-category="iot">
+            <div class="case-card__media">
+              <img src="./assets/case-ev-ocpp.jpg" alt="電動車充電操作系統與 OCPP 平台案例視覺" width="1376" height="768" loading="lazy">
+            </div>
+            <div class="case-card__body">
+              <div class="case-card__meta">
+                <span>EV CHARGING OS &amp; IOT</span>
+                <span>軟硬體整合系統</span>
+              </div>
+              <h3 class="case-card__title">電動車充電操作系統（CSMS）與 OCPP 跨廠牌平台</h3>
+              <p class="case-card__summary">
+                打造整合車主 App、營運商後台、標準 OCPP 通訊協定與金流結算的完整能源服務平台，並延伸至智能音箱與外勤派工系統。
+              </p>
+              <dl class="case-specs">
+                <div class="case-spec"><dt>背景挑戰</dt><dd>多廠牌充電樁韌體協定差異大，即時連線斷訊易造成計費爭議。</dd></div>
+                <div class="case-spec"><dt>解決方案</dt><dd>設計高可用 OCPP 閘道層、即時狀態同步與異常自動重連機制。</dd></div>
+                <div class="case-spec"><dt>交付成果</dt><dd>穩定串接多場域站點與金流，大幅降低維運人工派工與客訴成本。</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- Case 3 -->
+          <article class="case-card" data-category="security">
+            <div class="case-card__media">
+              <img src="./assets/case-fintech-security.jpg" alt="區塊鏈金融科技與企業 AI 資安防護案例視覺" width="1376" height="768" loading="lazy">
+            </div>
+            <div class="case-card__body">
+              <div class="case-card__meta">
+                <span>FINTECH &amp; AI SECURITY</span>
+                <span>高合規與零信任</span>
+              </div>
+              <h3 class="case-card__title">區塊鏈金融資產平台與企業級 AI 安全閘道導入</h3>
+              <p class="case-card__summary">
+                為金融科技、政府及大型企業建構高安全數位資產系統與地端 AI 安全護欄，讓團隊合規享受生成式 AI 效率。
+              </p>
+              <dl class="case-specs">
+                <div class="case-spec"><dt>背景挑戰</dt><dd>供應鏈稽核趨嚴，且員工使用外部 AI 存在機密合約與個資外洩隱憂。</dd></div>
+                <div class="case-spec"><dt>解決方案</dt><dd>導入 Secure-by-Design 源碼檢測與繁中 AI DLP 閘道地端部署。</dd></div>
+                <div class="case-spec"><dt>交付成果</dt><dd>落實零敏感資料出境與完整稽核軌跡，順利通過企業級資安審查。</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+
+        <!-- Industries Served -->
+        <div class="industries-band reveal">
+          <div class="industries-band__label">長期服務與進行中產業領域</div>
+          <div class="industries-list">
+            <span class="industry-tag">政府機關</span>
+            <span class="industry-tag">手機軟體上市公司</span>
+            <span class="industry-tag">大型百貨零售業者</span>
+            <span class="industry-tag">美妝品牌產業</span>
+            <span class="industry-tag">醫美連鎖產業</span>
+            <span class="industry-tag">電動車與充電營運商</span>
+            <span class="industry-tag">FinTech 與區塊鏈金融</span>
+            <span class="industry-tag">智能音箱與智慧家庭 IoT</span>
+            <span class="industry-tag">企業級智慧派工維運</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. Why EZTech & Collaboration Process ==================== -->
+    <section id="process" class="section section-divider">
+      <div class="container">
+        <div class="why-layout reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow__num">05</span> WHY EZTECH</div>
+            <h2 class="section-title">一線大廠工程基因，<br>用數據與敏捷打造長期競爭力</h2>
+            <p class="section-lead" style="margin-top: 1.15rem;">
+              純粹科技已穩定運作多年，核心成員皆出身一線科技大廠，平均擁有 10 年以上 APP 與大型軟體實戰背景。我們不靠直覺做設計，而是用數據、工程紀律與資安標準交付每一個產品。
+            </p>
+          </div>
+
+          <div class="principles-list">
+            <div class="principle">
+              <div class="principle__num">01 / SENIOR ENGINEERING</div>
+              <h3 class="principle__title">大廠資深實戰班底</h3>
+              <p class="principle__desc">拒絕新手練功。核心架構師與產品設計師直接參與專案，從容應對高併發、跨平台與複雜系統串接。</p>
+            </div>
+            <div class="principle">
+              <div class="principle__num">02 / AGILE TRANSPARENCY</div>
+              <h3 class="principle__title">高度透明的敏捷交付</h3>
+              <p class="principle__desc">固定 Sprint 節奏、可驗證的階段性 Demo 與完整程式碼控管，確保專案進度清晰可控。</p>
+            </div>
+            <div class="principle">
+              <div class="principle__num">03 / DATA-DRIVEN UX</div>
+              <h3 class="principle__title">數據驅動設計驗證</h3>
+              <p class="principle__desc">結合行為漏斗、留存分析與 A/B 實驗，讓每次介面改版都能對應到實質轉換率提升。</p>
+            </div>
+            <div class="principle">
+              <div class="principle__num">04 / AWARD-WINNING CRAFT</div>
+              <h3 class="principle__title">國際設計獎等級美學</h3>
+              <p class="principle__desc">作品連續多年獲得國際設計獎肯定，在品牌辨識度、操作直覺與商業實用性之間取得最佳平衡。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Step Process -->
+        <div class="process-strip reveal">
+          <div class="eyebrow"><span class="eyebrow__num">WORKFLOW</span> 透明合作流程</div>
+          <h3 class="section-title" style="font-size: clamp(1.45rem, 2.4vw, 1.95rem);">從概念驗證到規模化上線的四個階段</h3>
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="process-step__index">STEP 01 · 1–2 週</div>
+              <h4 class="process-step__title">需求盤點與架構健檢</h4>
+              <p class="process-step__desc">釐清商業目標、用戶場景、技術風險與資安合規需求，產出明確範疇與里程碑藍圖。</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__index">STEP 02 · 2–3 週</div>
+              <h4 class="process-step__title">UI/UX 原型與商業設計</h4>
+              <p class="process-step__desc">完成可互動原型、設計系統與變現漏斗規劃，在寫程式前先驗證核心操作流暢度。</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__index">STEP 03 · 雙週衝刺</div>
+              <h4 class="process-step__title">敏捷開發與安全左移</h4>
+              <p class="process-step__desc">同步導入 SAST 源碼檢測、權限驗證與自動化測試，每個 Sprint 交付可實際操作的測試版本。</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__index">STEP 04 · 持續增長</div>
+              <h4 class="process-step__title">上線監控、增長與維運</h4>
+              <p class="process-step__desc">協助商店上架、行銷投放歸因與 7×24 弱點監控，持續依據真實數據優化產品營收。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. Transparent Pricing ==================== -->
+    <section id="pricing" class="section section-divider">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow__num">06</span> TRANSPARENT PRICING</div>
+            <h2 class="section-title">資安與科技顧問方案報價</h2>
+          </div>
+          <p class="section-lead">
+            提供彈性清晰的合作模式：可單獨訂閱 EZTech Security 補齊資安防禦，或委託我們打造具備商業增長力的全生命週期數位產品。
+          </p>
+        </div>
+
+        <div class="billing-switch-wrap reveal">
+          <div class="billing-switch" role="group" aria-label="計費週期切換">
+            <button id="btn-monthly" type="button" class="billing-btn is-active" aria-pressed="true" data-billing="monthly">
+              月繳方案
+            </button>
+            <button id="btn-annual" type="button" class="billing-btn" aria-pressed="false" data-billing="annual">
+              年繳方案 <span class="save-badge">省 20%</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="pricing-grid reveal">
+          <!-- Plan 1 -->
+          <article class="plan-card">
+            <div>
+              <div class="plan-card__header">
+                <h3 class="plan-card__name">資安輕量防護（SaaS 訂閱）</h3>
+              </div>
+              <p class="plan-card__target">適合既有系統與中小企業快速補齊 AI 與外部防禦</p>
+              <div class="plan-card__price">
+                <span class="plan-card__currency">NT$</span>
+                <span id="price-saas" class="plan-card__amount">12,000</span>
+                <span class="plan-card__unit">/ 月</span>
+              </div>
+              <p id="note-saas" class="plan-card__note">按月訂閱，隨時可升級擴充</p>
+
+              <ul class="check-list plan-card__features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>定期自動化弱點掃描與外部風險盤點</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>7×24 API 與資料庫異常存取即時告警</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>繁體中文 AI 護欄與台灣個資自動去識別化</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>每月自動化資安狀態與風險摘要報告</li>
+              </ul>
+            </div>
+            <button id="btn-plan-saas" type="button" class="btn btn--ghost btn--full" data-open-modal data-plan-key="saas" data-plan="資安輕量防護（SaaS 訂閱）" data-modules="資訊安全模組">
+              選擇資安輕量防護
+            </button>
+          </article>
+
+          <!-- Plan 2 (Featured) -->
+          <article class="plan-card plan-card--featured">
+            <div>
+              <div class="plan-card__header">
+                <h3 class="plan-card__name">客製化軟體＋安全開發</h3>
+                <span class="plan-card__badge">MOST POPULAR</span>
+              </div>
+              <p class="plan-card__target">適合新產品從 0 到 1 開發、改版與商業化增長一條龍</p>
+              <div class="plan-card__price">
+                <span class="plan-card__amount" style="font-size: clamp(1.65rem, 2.3vw, 2rem);">依專案範疇報價</span>
+              </div>
+              <p class="plan-card__note">支援 MVP 專案制或月費顧問制 · 附免費初步架構評估</p>
+
+              <ul class="check-list plan-card__features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>國際設計獎等級 App / Web 設計與敏捷開發</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><strong>內建 Secure-by-Design 源碼檢測與權限防護</strong></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>商業化變現模式設計、成長行銷與廣告投放</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>支援軟硬體整合、IoT 與 EV / OCPP 系統開發</li>
+              </ul>
+            </div>
+            <button id="btn-plan-custom" type="button" class="btn btn--primary btn--full" data-open-modal data-plan="客製化軟體＋安全開發（專案／顧問制）" data-modules="軟體開發,商業化與行銷,資訊安全模組">
+              預約專案與顧問評估
+            </button>
+          </article>
+
+          <!-- Plan 3 -->
+          <article class="plan-card">
+            <div>
+              <div class="plan-card__header">
+                <h3 class="plan-card__name">企業旗艦全託管（大型合規）</h3>
+              </div>
+              <p class="plan-card__target">適合上市櫃企業、政府機關與 FinTech 金融科技</p>
+              <div class="plan-card__price">
+                <span class="plan-card__currency">NT$</span>
+                <span id="price-enterprise" class="plan-card__amount">48,000</span>
+                <span class="plan-card__unit">/ 月起</span>
+              </div>
+              <p id="note-enterprise" class="plan-card__note">含專屬顧問與地端隔離部署支援</p>
+
+              <ul class="check-list plan-card__features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>專屬一線大廠級架構師與資安顧問支援</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>全地端（On-Premise）部署 AI 護欄與客製 DLP 規則</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>定期紅隊演練、滲透測試與高階漏洞修補</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>完整供應鏈與法規稽核合規報告交付</li>
+              </ul>
+            </div>
+            <button id="btn-plan-enterprise" type="button" class="btn btn--ghost btn--full" data-open-modal data-plan-key="enterprise" data-plan="企業旗艦全託管（大型與合規）" data-modules="資訊安全模組,軟硬體與 OCPP">
+              洽詢企業旗艦方案
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. FAQ Accordion ==================== -->
+    <section id="faq" class="section section-divider">
+      <div class="container">
+        <div class="faq-layout reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow__num">07</span> FAQ</div>
+            <h2 class="section-title">企業合作常見問題</h2>
+            <p class="section-lead" style="margin-top: 1rem;">
+              若您的專案涉及特殊合規要求、跨系統重構或保密協議（NDA），歡迎直接預約顧問深度對談。
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>我們已有內部開發團隊，可以只導入 EZTech Security 資安模組或增長顧問嗎？</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-panel__inner">
+                  完全可以。我們的四大模組皆可獨立導入，例如僅串接 EZTech AI 安全閘道器、導入 CI/CD 原始碼檢測，或是針對既有 App 進行體驗優化與付費轉換顧問服務。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>EZTech AI 安全閘道器會保留或拿我們的企業資料來訓練模型嗎？</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-panel__inner">
+                  絕對不會。閘道採零資料留存（Zero Data Retention）原則設計，敏感欄位在離開企業網路前即已去識別化；針對金融、政府與大型上市櫃客戶，我們亦提供全地端私有部署方案。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>委託開發 App 或企業系統，原始碼與智慧財產權歸屬為何？</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-panel__inner">
+                  專案結案驗收後，依合約約定將客製化原始碼、設計檔案與技術文件完整交付予客戶，不綁架廠商鎖定（No Vendor Lock-in），並可提供後續維運或協助移交給內部團隊。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>從洽談到第一個可用版本（MVP）上線通常需要多久？</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-panel__inner">
+                  一般 MVP 產品約 6 至 10 週可完成設計與核心功能上線；若是涉及 EV/OCPP 軟硬體整合或大型金融／派工平台，我們會依階段拆分為每 2 週可驗證的 Sprint 里程碑交付。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span>初次技術評估與報價前，可以簽署保密協議（NDA）嗎？</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-panel__inner">
+                  可以。我們服務多家政府機關與上市企業，對於商業構想與既有系統架構皆採取嚴格保密標準，您可在預約諮詢時註明需求，我們將於首次會議前完成雙方 NDA 簽署。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10. Closing CTA ==================== -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2 class="cta-band__title">準備好打造下一個具規模與防禦力的數位產品了嗎？</h2>
+            <p class="cta-band__desc">預約 30 分鐘免費初步架構與資安健檢，由具備 10+ 年一線大廠經驗的產品與資安架構師直接與您對談。</p>
+          </div>
+          <div class="cta-band__actions">
+            <button type="button" class="btn btn--primary" data-open-modal data-plan="30 分鐘免費架構與資安健檢" data-modules="軟體開發,資訊安全模組">
+              立即預約免費諮詢
+            </button>
+            <a href="mailto:contact@eztech.com.tw" class="btn btn--ghost">
+              寫信給顧問團隊
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 11. Footer ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#top" class="brand">
+            <div class="brand__mark" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M5 6.5H19L12.5 12H19L7.5 18.5L11 12.5H5L11.5 6.5H5Z" fill="#F2F4F7"/>
+                <rect x="5" y="3.5" width="7" height="1.8" rx="0.9" fill="#3CCBD7"/>
+              </svg>
+            </div>
+            <div class="brand__text">
+              <span class="brand__name">EZTech<span>|</span>純粹科技</span>
+              <span class="brand__sub">純粹科技股份有限公司</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            從 0 到億級用戶的全方位科技顧問夥伴。結合一線大廠 10+ 年研發底蘊、國際設計獎美學、商業增長策略與企業級繁中資安防禦模組。
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">導覽與服務項目</h3>
+          <ul class="footer-links">
+            <li><a href="#services">軟體產品設計與開發 (App / Web)</a></li>
+            <li><a href="#services">商業化模式設計與增長行銷</a></li>
+            <li><a href="#services">軟硬體整合與 EV / OCPP 系統</a></li>
+            <li><a href="#security">EZTech Security 資訊安全模組</a></li>
+            <li><a href="#demo">AI 安全閘道器即時模擬器</a></li>
+            <li><a href="#pricing">方案與顧問報價</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">聯絡我們</h3>
+          <!-- 提醒：正式上線前請確認以下地址、信箱與電話為最新官方聯絡資訊 -->
+          <ul class="footer-links footer-contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10z"></path><circle cx="12" cy="11" r="2.2"></circle></svg>
+              <span>台北市內湖科技園區（台灣總部）</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><polyline points="3 7 12 13 21 7"></polyline></svg>
+              <a href="mailto:contact@eztech.com.tw">contact@eztech.com.tw</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+886226580000">(02) 2658-0000</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 純粹科技股份有限公司 EZTech. All rights reserved.</div>
+        <div class="footer-legal">
+          <button type="button" data-open-legal="privacy">隱私權政策</button>
+          <button type="button" data-open-legal="security">資訊安全聲明</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 12. Accessible Consultation Modal ==================== -->
+  <div id="consult-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title" hidden>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" data-close-modal="consult-modal" aria-label="關閉預約視窗">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+      </button>
+
+      <div id="modal-form-container">
+        <div class="eyebrow" style="margin-bottom: 0.45rem;">EZTECH ADVISORY</div>
+        <h3 id="consult-modal-title" class="modal-title">預約專案與資安諮詢</h3>
+        <p class="modal-sub">填寫以下資訊，我們將於 1 個工作日內安排資深產品或資安架構師與您聯繫（可於首次對談前簽署 NDA）。</p>
+
+        <form id="consult-form" class="form-grid">
+          <div class="form-row-2">
+            <div class="field">
+              <label for="consult-name">您的姓名 *</label>
+              <input id="consult-name" name="name" type="text" required autocomplete="name" placeholder="例如：陳經理">
+            </div>
+            <div class="field">
+              <label for="consult-company">公司名稱 *</label>
+              <input id="consult-company" name="company" type="text" required autocomplete="organization" placeholder="例如：台灣範例股份有限公司">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="consult-email">企業 Email *</label>
+            <input id="consult-email" name="email" type="email" required autocomplete="email" placeholder="name@company.com.tw">
+          </div>
+
+          <div class="field">
+            <label for="consult-plan">關注方案</label>
+            <input id="consult-plan" name="plan" type="text" placeholder="一般專案與科技顧問諮詢">
+          </div>
+
+          <div class="field">
+            <label>需求模組（可複選）</label>
+            <div class="module-checks">
+              <label class="module-check"><input type="checkbox" name="modules" value="軟體開發"> <span>軟體開發 (App/Web)</span></label>
+              <label class="module-check"><input type="checkbox" name="modules" value="商業化與行銷"> <span>商業化與行銷</span></label>
+              <label class="module-check"><input type="checkbox" name="modules" value="軟硬體與 OCPP"> <span>軟硬體與 OCPP</span></label>
+              <label class="module-check"><input type="checkbox" name="modules" value="資訊安全模組"> <span>資訊安全模組</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="consult-notes">專案需求簡述</label>
+            <textarea id="consult-notes" name="notes" placeholder="簡述您的產品構想、系統架構、預計時程或是否需先簽署 NDA..."></textarea>
+          </div>
+
+          <button id="consult-submit-btn" type="submit" class="btn btn--primary btn--full">
+            送出諮詢申請
+          </button>
+        </form>
+      </div>
+
+      <div id="modal-success-container" class="form-feedback" aria-live="polite">
+        <div class="form-feedback__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3 id="feedback-title" class="modal-title">諮詢摘要已建立</h3>
+        <p id="feedback-desc" class="modal-sub" style="margin-bottom: 0.75rem;"></p>
+        <div class="form-feedback__actions">
+          <a id="feedback-mailto-link" href="#" class="btn btn--primary btn--sm">以 Email 直接寄出</a>
+          <button id="feedback-copy-btn" type="button" class="btn btn--ghost btn--sm">複製諮詢摘要</button>
+          <button type="button" class="btn btn--ghost btn--sm" data-close-modal="consult-modal">返回網站</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 13. Legal / Policy Modal ==================== -->
+  <div id="legal-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title" hidden>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" data-close-modal="legal-modal" aria-label="關閉條款視窗">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+      </button>
+      <div class="eyebrow" style="margin-bottom: 0.45rem;">LEGAL &amp; COMPLIANCE</div>
+      <h3 id="legal-modal-title" class="modal-title">政策聲明</h3>
+      <div id="legal-modal-body" class="legal-content" style="margin-top: 1rem;"></div>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
