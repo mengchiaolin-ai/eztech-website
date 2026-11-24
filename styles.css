@@ -2022,6 +2022,85 @@ button {
   margin-top: 0.4rem;
 }
 
+/* LINE Official Account Integration Styling */
+.btn--line {
+  background-color: #06C755;
+  color: #ffffff;
+}
+
+.btn--line:hover {
+  background-color: #05b34c;
+  transform: translateY(-1px);
+}
+
+.modal-direct-line {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.modal-direct-line a {
+  color: #06C755;
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
+
+.modal-direct-line a:hover {
+  text-decoration: underline;
+}
+
+.floating-line {
+  position: fixed;
+  right: clamp(1rem, 2.5vw, 1.75rem);
+  bottom: clamp(1rem, 2.5vw, 1.75rem);
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.68rem 1.05rem;
+  border-radius: 999px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  box-shadow: 0 14px 36px -10px hsla(0, 0%, 0%, 0.72);
+  transition: transform 0.2s var(--ease-out), border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.floating-line:hover {
+  transform: translateY(-2px);
+  border-color: hsla(145, 94%, 40%, 0.6);
+  background-color: var(--bg-interactive);
+}
+
+.floating-line__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #06C755;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 520px) {
+  .floating-line__label {
+    display: none;
+  }
+  .floating-line {
+    padding: 0.65rem;
+  }
+  .floating-line__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 /* ==========================================================================
    Scroll Reveal (Progressive Enhancement)
    ========================================================================== */

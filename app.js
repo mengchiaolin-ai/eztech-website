@@ -13,7 +13,8 @@
    */
   const CONSULT_CONFIG = {
     endpoint: '',
-    contactEmail: 'contact@eztech.com.tw'
+    contactEmail: 'contact@eztech.com.tw',
+    lineOaId: '@lnp7687s'
   };
 
   /* ------------------------------------------------------------------------
@@ -557,11 +558,12 @@
     });
   });
 
-  // Consultation Form Submission (supports real Webhook endpoint + Mailto/Copy fallback)
+  // Consultation Form Submission (LINE Official Account pre-filled flow + optional Webhook + Copy/Email fallbacks)
   const consultForm = document.getElementById('consult-form');
   const submitBtn = document.getElementById('consult-submit-btn');
   const feedbackTitle = document.getElementById('feedback-title');
   const feedbackDesc = document.getElementById('feedback-desc');
+  const lineLink = document.getElementById('feedback-line-link');
   const mailtoLink = document.getElementById('feedback-mailto-link');
   const copyBtn = document.getElementById('feedback-copy-btn');
   let latestSummaryText = '';
@@ -580,7 +582,7 @@
     };
 
     latestSummaryText = [
-      `【EZTech 純粹科技 專案／資安諮詢申請】`,
+      '【EZTech 專案／資安預約諮詢】',
       `聯絡人：${payload.name}`,
       `公司名稱：${payload.company}`,
       `企業 Email：${payload.email}`,
@@ -589,39 +591,38 @@
       `需求簡述：${payload.notes}`
     ].join('\n');
 
+    const lineOaUrl = `https://line.me/R/oaMessage/${CONSULT_CONFIG.lineOaId}/?${encodeURIComponent(latestSummaryText)}`;
+    if (lineLink) lineLink.href = lineOaUrl;
+
     const mailSubject = encodeURIComponent(`[EZTech 諮詢] ${payload.company} - ${payload.plan}`);
     const mailBody = encodeURIComponent(latestSummaryText);
-    mailtoLink.href = `mailto:${CONSULT_CONFIG.contactEmail}?subject=${mailSubject}&body=${mailBody}`;
+    if (mailtoLink) mailtoLink.href = `mailto:${CONSULT_CONFIG.contactEmail}?subject=${mailSubject}&body=${mailBody}`;
 
     if (CONSULT_CONFIG.endpoint) {
       submitBtn.disabled = true;
       submitBtn.textContent = '送出中...';
       try {
-        const res = await fetch(CONSULT_CONFIG.endpoint, {
+        await fetch(CONSULT_CONFIG.endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify(payload)
         });
-        if (!res.ok) throw new Error('Request failed');
-        feedbackTitle.textContent = '已收到您的諮詢申請';
-        feedbackDesc.textContent = '感謝您聯繫純粹科技（EZTech），我們的產品與資安顧問將於 1 個工作日內主動與您聯繫。';
-        mailtoLink.hidden = true;
       } catch {
-        feedbackTitle.textContent = '連線暫時忙碌，已為您備妥諮詢摘要';
-        feedbackDesc.textContent = '為確保您的需求不遺漏，請點擊下方按鈕直接以 Email 寄出或複製摘要聯繫我們。';
-        mailtoLink.hidden = false;
+        // 即使背景記錄失敗，仍透過 LINE 確保客戶能直接聯繫
       } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = '送出諮詢申請';
+        submitBtn.textContent = '送出並前往 LINE 官方帳號預約';
       }
-    } else {
-      feedbackTitle.textContent = '已為您整理好諮詢摘要';
-      feedbackDesc.textContent = `點擊下方「以 Email 直接寄出」即可快速傳送至 ${CONSULT_CONFIG.contactEmail}，或複製摘要透過您偏好的管道聯繫顧問團隊。`;
-      mailtoLink.hidden = false;
     }
+
+    feedbackTitle.textContent = '已為您準備好 LINE 預約訊息';
+    feedbackDesc.textContent = `系統已自動將您的需求帶入 LINE 官方帳號（${CONSULT_CONFIG.lineOaId}）。若視窗未自動開啟，請點擊下方按鈕前往傳送，或先複製摘要後於手機 LINE 貼上。`;
 
     document.getElementById('modal-form-container').hidden = true;
     document.getElementById('modal-success-container').classList.add('is-visible');
+
+    // 於使用者點擊送出時直接開啟 LINE 聊天室並帶入預填訊息
+    window.open(lineOaUrl, '_blank', 'noopener,noreferrer');
   });
 
   copyBtn?.addEventListener('click', async () => {
